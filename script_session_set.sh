@@ -142,15 +142,42 @@ configure_keyrepeat()
 	echo "${GREEN}Configuration of KeyRepeat done${NONE}"
 }
 
+######
+#	Function show_icons_in_menu_bar()
+#	This function takes 0 argument
+#	MenuBarIcons takes array formated like this: ("Bluetooth" "Keychain" "Clock") !Required
+######
+show_icons_in_menu_bar()
+{
+	echo "\n${PINK}###  show_icons_in_menu_bar function  ###${NONE}";
+
+	for i in "${MenuBarIcons[@]}"; do
+		echo "${CYAN}Icon add to the menu bar:${NONE}${MAGENTA} ${i}${NONE}";
+		if [ "$i" = "Keychain" ]
+		then
+			PathMenu="/Applications/Utilities/Keychain Access.app/Contents/Resources/Keychain.menu"
+		else
+			PathMenu="/System/Library/CoreServices/Menu Extras/${i}.menu"
+		fi
+		defaults write com.apple.systemuiserver menuExtras -array-add "${PathMenu}"
+	done
+
+	echo "${YELLOW}Restart the menu-bar${NONE}"
+	killall SystemUIServer
+	echo "${GREEN}Configuration of MenuBar done${NONE}"
+}
+
 main()
 {
 	DockApplications=("App1" "App2" "App3")
+	MenuBarIcons=("Bluetooth" "Keychain")
 
 	configure_dock buttom 0
 	configure_wallpaper "\"${HOME}/your/path/picture.jpg\""
 	configure_screensaver 0 0
 	configure_hotcorners tr 5
 	configure_keyrepeat
+	show_icons_in_menu_bar
 }
 
 main
