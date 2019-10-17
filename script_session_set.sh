@@ -143,11 +143,11 @@ configure_keyrepeat()
 }
 
 ######
-#	Function show_icons_in_menu_bar()
+#	Function configure_menubar()
 #	This function takes 0 argument
 #	MenuBarIcons takes array formated like this: ("Bluetooth" "Keychain" "Clock") !Required
 ######
-show_icons_in_menu_bar()
+configure_menubar()
 {
 	echo "\n${PINK}###  show_icons_in_menu_bar function  ###${NONE}";
 
@@ -177,7 +177,7 @@ main()
 	configure_screensaver 0 0
 	configure_hotcorners tr 5
 	configure_keyrepeat
-	show_icons_in_menu_bar
+	configure_menubar
 }
 
 main
