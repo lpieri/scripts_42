@@ -166,18 +166,3 @@ configure_menubar()
 	killall SystemUIServer
 	echo "${GREEN}Configuration of MenuBar done${NONE}"
 }
-
-main()
-{
-	DockApplications=("App1" "App2" "App3")
-	MenuBarIcons=("Bluetooth" "Keychain")
-
-	configure_dock buttom 0
-	configure_wallpaper "\"${HOME}/your/path/picture.jpg\""
-	configure_screensaver 0 0
-	configure_hotcorners tr 5
-	configure_keyrepeat
-	configure_menubar
-}
-
-main
