@@ -70,6 +70,7 @@ main()
 	configure_plist
 	echo "${RED}Clean of the configuration repo${NONE}"
 	rm -rf $InitialPath
+	zsh -i; cd;
 	echo "${GREEN}The configuration is complete!${NONE}"
 }
 
