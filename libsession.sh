@@ -1,24 +1,19 @@
 #!/bin/zsh
 
-######
-#	Author: Louise Pieri: cpieri@student.42.fr (aka delay)
-######
+#############################################################
+#															#
+#	Author: Louise Pieri: cpieri@student.42.fr (aka delay)	#
+#															#
+#############################################################
 
-NONE="\033[0m"
-RED="\033[31m"
-GREEN="\033[32m"
-YELLOW="\033[33m"
-BLUE="\033[34m"
-MAGENTA="\033[35m"
-CYAN="\033[36m"
-PINK="\033[38;5;206m"
+source colors.sh
 
 ######
-#	Function configure_dock()
+#	Function configure_dock
 #	This function takes 2 arguments
 #	@argument OrientationDock 3 options: left, buttom, right !Required
 #	@argument AutoHideDock 2 options: 0 (for false), 1 (for true) !Required
-#	@argument AutoHideDock takes array formated like this: ("ApplicatioName1" "ApplicationName2" "ApplicationName3") !Required
+#	@argument DockApplications takes array formated like this: ("ApplicatioName1" "ApplicationName2" "ApplicationName3") !Required
 ######
 configure_dock()
 {
@@ -57,7 +52,7 @@ configure_wallpaper()
 }
 
 ######
-#	Function configure_wallpaper
+#	Function configure_screensaver
 #	This function takes 2 arguments
 #	@argument PasswordActive 2 options: 0 (for false), 1 (for true) !Required
 #	@argument PasswordDelay in seconde !Required

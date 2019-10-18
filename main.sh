@@ -8,7 +8,7 @@ source libsession.sh
 
 main()
 {
-	MenuBarIcons=("Bluetooth")
+	MenuBarIcons=("Bluetooth" "Keychain")
 
 	configure_menubar
 }
