@@ -33,7 +33,9 @@ main()
 main
 ```
 
-For now you have to execute the script like that `sh main.sh` but soon he will have another script to launch the `main` the start of your session ;)
+~~For now you have to execute the script like that `sh main.sh` but soon he will have another script to launch the `main` the start of your session ;)~~
+
+Now just launch the command `sh .configure.sh` ! Logout and Re-Login and it's finish :)
 
 ## I want to contribute to the project! But how?
  - Fork this repository
