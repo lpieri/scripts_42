@@ -163,7 +163,7 @@ configure_menubar()
 }
 
 ######
-#	Function configure_menubar()
+#	Function configure_mousespeed()
 #	This function takes 1 argument
 #	@argument Speed take an int between 1(low) and 10(fast)
 #	For now you have to logout/login to changes take effect
@@ -190,4 +190,33 @@ configure_mousespeed()
 	echo "${BLUE}Set your mousespeed $Speed ${NONE}";
 	defaults write -g com.apple.mouse.scaling $Speed
 	echo "${GREEN}Configuration of MouseSpeed done${NONE}"	
+}
+
+#####
+#	Function configure_volume()
+#	This function takes 2 arguments
+#	@argument Output take an int, it represents the percentage of the output volume 
+#	@argument Alert take an int, 0 or 1. Disable or enable the alert volume
+######
+configure_volume()
+{
+	Output=$1
+	Alert=$2
+
+	echo "\n${PINK}###  configure_volume function  ###${NONE}";
+	echo "${BLUE}Set your volume to $Output %${NONE}";
+	osascript -e "set volume output volume $Output"
+
+	if [ $Alert -eq 0 ]
+	then
+		echo "${BLUE}Disable alert volume${NONE}";
+		#disable alert volume
+		defaults write -g com.apple.sound.beep.volume 0
+		#disable user interface sound effects
+		defaults write -g com.apple.sound.uiaudio.enabled 0
+		#disable feedback sound when volume is changed
+		defaults write -g com.apple.sound.beep.feedback 0
+	fi
+
+	echo "${GREEN}Configuration of Volume done${NONE}"	
 }
