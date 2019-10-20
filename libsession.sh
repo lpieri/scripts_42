@@ -118,7 +118,7 @@ configure_scrolldirection()
 	echo "\n${PINK}###  configure_scrolldirection function  ###${NONE}";
 	echo "${BLUE}Set your scroll direction${NONE}";
 	defaults write -g com.apple.swipescrolldirection -bool $Direction
-	echo "${GREEN}Configuration of Hot Corners done${NONE}"
+	echo "${GREEN}Configuration of Scroll Direction done${NONE}"
 }
 
 ######
@@ -160,4 +160,34 @@ configure_menubar()
 	echo "${YELLOW}Restart the menu-bar${NONE}"
 	killall SystemUIServer
 	echo "${GREEN}Configuration of MenuBar done${NONE}"
+}
+
+######
+#	Function configure_menubar()
+#	This function takes 1 argument
+#	@argument Speed take an int between 1(low) and 10(fast)
+#	For now you have to logout/login to changes take effect
+######
+configure_mousespeed()
+{
+	Speed=$1
+
+	case $Speed in
+		1) Speed=0 ;;
+		2) Speed=0.125 ;;
+		3) Speed=0.5 ;;
+		4) Speed=0.6875 ;;
+		5) Speed=0.875 ;;
+		6) Speed=1 ;;
+		7) Speed=1.5 ;;
+		8) Speed=2 ;;
+		9) Speed=2.5 ;;
+		10) Speed=3 ;;
+		*) Speed=1 ;;
+	esac
+
+	echo "\n${PINK}###  configure_mousespeed function  ###${NONE}";
+	echo "${BLUE}Set your mousespeed $Speed ${NONE}";
+	defaults write -g com.apple.mouse.scaling $Speed
+	echo "${GREEN}Configuration of MouseSpeed done${NONE}"	
 }
