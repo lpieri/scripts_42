@@ -28,6 +28,8 @@ main()
 	configure_hotcorners tr 5 # Calling function configure_hotcorners for add one hot corners
 	configure_keyrepeat # Calling function configure_keyrepeat set the keyrepeat at the minimum delay
 	configure_menubar # Calling function configure_menubar for add in my menu bar all MenuBarIcons
+	configure_mousespeed 5 # Calling function configure_mousespeed to set the mousespeed to 5 
+	configure_volume 50 0 # Calling function configure_volume to set the ouput volume at 50% and disable alert volume
 }
 
 main
