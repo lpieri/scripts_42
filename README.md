@@ -22,7 +22,7 @@ main()
 	DockApplications=("App1" "App2" "App3") # All the applications I want in my dock
 	MenuBarIcons=("Bluetooth" "Keychain") # All the menus I want in my menu bar
 
-	configure_dock buttom 0 # Calling function configure_dock for set my dock in the buttom without the autohide
+	configure_dock bottom 0 # Calling function configure_dock for set my dock in the bottom without the autohide
 	configure_wallpaper "\"${HOME}/your/path/picture.jpg\"" # Calling function configure_wallpaper for change my wallpaper
 	configure_screensaver 0 0 # Calling function configure_screensaver for require my password on my screensaver without delay
 	configure_hotcorners tr 5 # Calling function configure_hotcorners for add one hot corners
