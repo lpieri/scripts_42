@@ -39,6 +39,14 @@ main
 
 Now just launch the command `sh .configure.sh` ! Logout and Re-Login and it's finish :)
 
+## Contributors
+
+[Louise Pieri](https://github.com/lpieri)
+
+[leonardogb](https://github.com/leonardogb)
+
+[knona](https://github.com/knona)
+
 ## I want to contribute to the project! But how?
  - Fork this repository
  - Clone your repository forked
