@@ -1,5 +1,12 @@
 # Scripts for configure your session @42
 
+
+<p align="center">
+<a href="https://www.codefactor.io/repository/github/lpieri/scripts_42"><img src="https://www.codefactor.io/repository/github/lpieri/scripts_42/badge" alt="CodeFactor" /></a>
+</p>
+
+---
+
 Do you find it painful to reset all your preferences every time you change computers?
 
 That's why I created this directory too. In this directory you will find a set of functions to change your preferences on Macos.
